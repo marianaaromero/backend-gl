@@ -12,7 +12,7 @@ http://localhost:3000/api
 ### **👤 Users**
 POST /register
 Register a new user.
-**Request Body:**
+#### **Request Body:**
 ```json
 {
     "username": "newUser",
@@ -21,6 +21,7 @@ Register a new user.
     "age": 20
 }
 ```
+POST /register
 
 ### **🏋️‍♂️ Routines**
 GET /routines
