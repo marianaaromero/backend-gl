@@ -56,7 +56,7 @@ Retrieve the profile of a specific user.
 
 Retrieve a list of all routines.
 ```json
-[{
+{
     "id": 1,
     "title": "Beginner Freestyle Technique",
     "description": "A routine designed to help beginners develop basic freestyle stroke skills.",
@@ -66,11 +66,9 @@ Retrieve a list of all routines.
     "recommendedLevel": "BEGINNER",
     "createdAt": "2024-07-30T01:01:30.285Z",
     "updatedAt": "2024-07-30T01:01:30.285Z"
-},
-{
+
 ...
 }
-]
 ```
 
 **POST /routines**
@@ -99,8 +97,8 @@ Create a new routine.
     "recommendedLevel": "ADVANCED",
     "createdAt": "2024-07-01T00:00:00.000Z",
     "updatedAt": "2024-07-01T00:00:00.000Z"
-}, {
-message: 'Routine created successfully'
+
+    message: 'Routine created successfully'
 }
 ```
 
@@ -172,7 +170,7 @@ Retrieve a list of all strokes.
     "id": 1,
     "name": "Freestyle",
     "description": "The freestyle stroke, also known as the crawl, is the fastest and most commonly used stroke in competitions. It involves alternating arm movements and a continuous leg kick, with the head submerged and turned for breathing. It is a highly efficient stroke and the preferred choice for long distances."
-},{
+
 ...
 }
 ```
@@ -203,7 +201,7 @@ Retrieve a list of all tips.
     "level": "BEGINNER",
     "createdAt": "2024-07-30T01:27:13.670Z",
     "updatedAt": "2024-07-30T01:27:13.670Z"
-},{
+
 ...
 }
 ```
@@ -231,8 +229,8 @@ Create a new tip.
     "level": "BEGINNER",
     "createdAt": "2024-07-30T01:27:13.670Z",
     "updatedAt": "2024-07-30T01:27:13.670Z"
-},{
-message: 'Tip created successfully'
+
+    message: 'Tip created successfully'
 }
 ```
 
@@ -319,7 +317,7 @@ Retrieve a list of routines marked as favorite by the logged-in user, using the 
         "username": "johndoe0",
         "email": "mohndoe@gmail.com"
     }
-}, {
+
 ...
 }
 ```
@@ -353,7 +351,7 @@ Retrieve a list of tips marked as favorite by the logged-in user, using the user
         "username": "johndoe0",
         "email": "mohndoe@gmail.com"
     }
-}, {
+
 ...
 }
 ```
