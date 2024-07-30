@@ -66,8 +66,9 @@ Retrieve a list of all routines.
     "recommendedLevel": "BEGINNER",
     "createdAt": "2024-07-30T01:01:30.285Z",
     "updatedAt": "2024-07-30T01:01:30.285Z"
-},
+}, {
 ...
+}
 ```
 
 **POST /routines**
@@ -169,8 +170,9 @@ Retrieve a list of all strokes.
     "id": 1,
     "name": "Freestyle",
     "description": "The freestyle stroke, also known as the crawl, is the fastest and most commonly used stroke in competitions. It involves alternating arm movements and a continuous leg kick, with the head submerged and turned for breathing. It is a highly efficient stroke and the preferred choice for long distances."
-},
+},{
 ...
+}
 ```
 
 **GET /strokes/:id**
@@ -199,8 +201,9 @@ Retrieve a list of all tips.
     "level": "BEGINNER",
     "createdAt": "2024-07-30T01:27:13.670Z",
     "updatedAt": "2024-07-30T01:27:13.670Z"
-},
+},{
 ...
+}
 ```
 
 **POST /tips**
@@ -282,4 +285,74 @@ Delete a specific tip.
 }
 ```
 
+## ❤️ Mark as Favorite
+Users can mark routines and tips as their favorites. This functionality allows users to easily find and revisit their preferred routines and tips.
+
+### **Favorite a Routine**
+**POST /routine-fav**
+
+Marks a routine as favorite for the logged-in and selected user.
+
+#### **Request Body:**
+```json
+{
+    "userId": 1, 
+    "routineId": 1
+}
+```
+
+**GET /routine-fav**
+
+Retrieve a list of routines marked as favorite by the logged-in user, using the user id as the key on the query params. This also shows the username and email that comes within the id used.
+
+#### **Response:**
+```json
+{
+    "routineId": 1,
+    "userId": 1,
+    "routine": {
+            "title": "Beginner Freestyle Technique"
+    },
+    "user": {
+        "username": "johndoe0",
+        "email": "mohndoe@gmail.com"
+    }
+}, {
+...
+}
+```
+
+### **Favorite a Tip**
+**POST /tip-fav**
+
+Marks a tip as favorite for the logged-in and selected user.
+
+#### **Request Body:**
+```json
+{
+    "userId": 1, 
+    "tipId": 1
+}
+```
+
+**GET /tip-fav**
+
+Retrieve a list of tips marked as favorite by the logged-in user, using the user id as the key on the query params. This also shows the username and email that comes within the id used.
+
+#### **Response:**
+```json
+{
+    "tipId": 1,
+    "userId": 1,
+    "tip": {
+            "title": "Stay Hydrated"
+    },
+    "user": {
+        "username": "johndoe0",
+        "email": "mohndoe@gmail.com"
+    }
+}, {
+...
+}
+```
 
