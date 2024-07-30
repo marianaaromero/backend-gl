@@ -11,6 +11,7 @@ http://localhost:3000/api
 ## 📂 Endpoints
 ### **👤 Users**
 POST /register
+
 Register a new user.
 #### **Request Body:**
 ```json
@@ -21,7 +22,31 @@ Register a new user.
     "age": 20
 }
 ```
-POST /register
+POST /login
+Log in a user if the credentials are valid and creates a token and refreshToken.
+#### **Response:**
+```json
+{
+    "message": "Login successful",
+    "token": "...",
+    "refreshToken": "..."
+}
+```
+
+GET /profile/:id
+Retrieve the profile of a specific user.
+#### **Response:**
+```json
+{
+    "id": 1,
+    "username": "johndoe0",
+    "email": "johndoe@gmail.com",
+    "password": "$2b$10$IeT6dfdsfO6huY0BQoroI.rXxJu.n9m3xuC/LqrlC",
+    "age": 18,
+    "createdAt": "2023-07-30T00:37:57.760Z",
+    "updatedAt": "2024-07-30T00:37:57.760Z"
+}
+```
 
 ### **🏋️‍♂️ Routines**
 GET /routines
