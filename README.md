@@ -9,7 +9,23 @@ The API uses JWT-based authentication. Tokens must be included in the Authorizat
 http://localhost:3000/api
 
 ## 📂 Endpoints
-## 🏋️‍♂️ Routines
+### **👤 Users**
+POST /register
+Register a new user.
+**Request Body:**
+```json
+{
+    "username": "newUser",
+    "email": "new@example.com",
+    "password": "password123",
+    "age": 20
+}
+```
+
+### **🏋️‍♂️ Routines**
 GET /routines
 Retrieve a list of all routines.
+
+### **🏊 Strokes**
+
 
