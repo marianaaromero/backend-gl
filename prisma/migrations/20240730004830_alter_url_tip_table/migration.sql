@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "tips" ALTER COLUMN "url" DROP NOT NULL;
