@@ -11,6 +11,7 @@ http://localhost:3000/api
 ## 📂 Endpoints
 ### **👤 Users**
 **POST /register**
+
 Register a new user.
 #### **Request Body:**
 ```json
@@ -21,7 +22,9 @@ Register a new user.
     "age": 20
 }
 ```
+
 **POST /login**
+
 Log in a user if the credentials are valid. This also creates a token and refreshToken.
 #### **Response:**
 ```json
@@ -33,6 +36,7 @@ Log in a user if the credentials are valid. This also creates a token and refres
 ```
 
 **GET /profile/:id**
+
 Retrieve the profile of a specific user.
 #### **Response:**
 ```json
@@ -49,6 +53,7 @@ Retrieve the profile of a specific user.
 
 ### **🏋️‍♂️ Routines**
 **GET /routines**
+
 Retrieve a list of all routines.
 ```json
 {
@@ -66,6 +71,7 @@ Retrieve a list of all routines.
 ```
 
 **POST /routines**
+
 Create a new routine.
 #### **Request Body:**
 ```json
@@ -96,6 +102,7 @@ message: 'Routine created successfully'
 ```
 
 **GET /routines/:id**
+
 Retrieve details of a specific routine.
 #### **Response:**
 ```json
@@ -113,6 +120,7 @@ Retrieve details of a specific routine.
 ```
 
 **PATCH /routines/:id**
+
 Update details of a specific routine.
 #### **Request Body:**
 ```json
@@ -141,6 +149,7 @@ Update details of a specific routine.
 ```
 
 **DELETE /routines/:id**
+
 Delete a specific routine.
 #### **Response:**
 ```json
@@ -152,6 +161,7 @@ Delete a specific routine.
 
 ### **🏊 Strokes**
 **GET /strokes**
+
 Retrieve a list of all strokes.
 #### **Response:**
 ```json
@@ -164,6 +174,7 @@ Retrieve a list of all strokes.
 ```
 
 **GET /strokes/:id**
+
 Retrieve details of a specific stroke.
 #### **Response:**
 ```json
@@ -174,6 +185,101 @@ Retrieve details of a specific stroke.
 }
 ```
 
+### **💡 Tips**
+**GET /tips**
 
+Retrieve a list of all tips.
+```json
+{
+    "id": 1,
+    "title": "Stay Hydrated",
+    "creator": "Coach Emily",
+    "description": "Drink plenty of water before, during, and after swimming to maintain energy levels and muscle function.",
+    "url": null,
+    "level": "BEGINNER",
+    "createdAt": "2024-07-30T01:27:13.670Z",
+    "updatedAt": "2024-07-30T01:27:13.670Z"
+},
+...
+```
+
+**POST /tips**
+
+Create a new tip.
+#### **Request Body:**
+```json
+{
+    "title": "Stay Hydrated",
+    "creator": "Coach Emily",
+    "description": "Drink plenty of water before, during, and after swimming to maintain energy levels and muscle function.",
+    "level": "BEGINNER",
+}
+```
+#### **Response:**
+```json
+{
+    "id": 1,
+    "title": "Stay Hydrated",
+    "creator": "Coach Emily",
+    "description": "Drink plenty of water before, during, and after swimming to maintain energy levels and muscle function.",
+    "url": null,
+    "level": "BEGINNER",
+    "createdAt": "2024-07-30T01:27:13.670Z",
+    "updatedAt": "2024-07-30T01:27:13.670Z"
+},{
+message: 'Tip created successfully'
+}
+```
+
+**GET /tips/:id**
+
+Retrieve details of a specific tip.
+#### **Response:**
+```json
+{
+    "id": 4,
+    "title": "Breathing Technique",
+    "creator": "Swim Coach John",
+    "description": "Practice bilateral breathing in freestyle to maintain balance and rhythm in the water. Breathe every 3 strokes to improve efficiency.",
+    "url": null,
+    "level": "BEGINNER",
+    "createdAt": "2024-07-30T01:29:13.360Z",
+    "updatedAt": "2024-07-30T01:29:13.360Z"
+}
+```
+
+**PATCH /tips/:id**
+
+Update details of a specific tip.
+#### **Request Body:**
+```json
+{
+    "title": "Breathing Technique",
+    "creator": "Swim Coach John",
+    "description": "Practice bilateral breathing in freestyle to maintain balance and rhythm in the water. Breathe every 3 strokes to improve efficiency.",
+    "level": "INTERMEDIATE"
+}
+```
+#### **Response:**
+```json
+{
+    "title": "Breathing Technique",
+    "creator": "Swim Coach John",
+    "description": "Practice bilateral breathing in freestyle to maintain balance and rhythm in the water. Breathe every 3 strokes to improve efficiency.",
+    "level": "INTERMEDIATE"
+    "createdAt": "2024-07-01T00:00:00.000Z",
+    "updatedAt": "2024-07-02T00:00:00.000Z"
+}
+```
+
+**DELETE /tips/:id**
+
+Delete a specific tip.
+#### **Response:**
+```json
+{
+    "message": "Tip deleted successfully."
+}
+```
 
 
