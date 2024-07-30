@@ -56,7 +56,7 @@ Retrieve the profile of a specific user.
 
 Retrieve a list of all routines.
 ```json
-{
+[{
     "id": 1,
     "title": "Beginner Freestyle Technique",
     "description": "A routine designed to help beginners develop basic freestyle stroke skills.",
@@ -66,9 +66,11 @@ Retrieve a list of all routines.
     "recommendedLevel": "BEGINNER",
     "createdAt": "2024-07-30T01:01:30.285Z",
     "updatedAt": "2024-07-30T01:01:30.285Z"
-}, {
+},
+{
 ...
 }
+]
 ```
 
 **POST /routines**
